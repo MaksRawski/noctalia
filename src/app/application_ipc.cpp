@@ -171,6 +171,7 @@ void Application::initIpc() {
 
   auto applyNotificationDnd = [this](bool enabled) {
     m_notificationManager.setDoNotDisturb(enabled);
+    m_notificationToast.dndToggled(enabled);
     m_bar.refresh();
     if (m_panelManager.isOpenPanel("control-center")) {
       m_panelManager.refresh();
