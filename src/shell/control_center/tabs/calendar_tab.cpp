@@ -54,7 +54,7 @@ namespace {
     std::tm tm{};
     tm.tm_mon = month;
     tm.tm_mday = 1;
-    return formatStrftime("%B", tm);
+    return formatStrftime("%OB", tm);
   }
 
   int daysInMonth(int yearValue, int monthValue) {
